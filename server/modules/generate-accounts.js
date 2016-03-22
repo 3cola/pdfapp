@@ -11,7 +11,7 @@ let generateAccounts = () => {
       usersExist    = _checkIfAccountsExist( administrators.length + fakeUserCount );
 
   if ( !usersExist ) {
-    _createUsers( administrators );
+    _createUsers( administrators, true );
     _createUsers( _generateFakeUsers( fakeUserCount ) );
   }
 };
@@ -21,13 +21,19 @@ let _checkIfAccountsExist = ( count ) => {
   return userCount < count ? false : true;
 };
 
-let _createUsers = ( users ) => {
+let _createUsers = ( users, isAdmin ) => {
   for ( let i = 0; i < users.length; i++ ) {
     let user       = users[ i ],
         userExists = _checkIfUserExists( user.email );
 
     if ( !userExists ) {
-      _createUser( user );
+      let userId  = _createUser( user );
+
+      if ( isAdmin ) {
+        Roles.setUserRoles( userId, 'admin' );
+      } else {
+        Roles.setUserRoles( userId, 'employee' );
+      }
     }
   }
 };
@@ -37,13 +43,15 @@ let _checkIfUserExists = ( email ) => {
 };
 
 let _createUser = ( user ) => {
-  Accounts.createUser({
+  let userId = Accounts.createUser({
     email: user.email,
     password: user.password,
     profile: {
       name: user.name
     }
   });
+
+  return userId;
 };
 
 let _generateFakeUsers = ( count ) => {

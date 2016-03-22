@@ -3,6 +3,7 @@
     "key": "value"
   },
   "private": {
-    "MAIL_URL": ""
+    "MAIL_URL": "smtp://postmaster%40sandboxbb39834b9a104899985fbc03fe72c6ca.mailgun.org:21c55f2a2ccad69ccd6b5021b61cd639@smtp.mailgun.org:587/",
+    "domain": "localhost:3000"
   }
 }

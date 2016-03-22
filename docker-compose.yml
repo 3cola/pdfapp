@@ -1,0 +1,17 @@
+# Run with `docker-compose up -d`
+# TODO We should activate MongoDB oplog for better performance.
+pdfapp:
+  image: pdfapp
+  links:
+    - pdfapp-db
+  environment:
+    - MONGO_URL=mongodb://pdfapp-db/pdfapp
+    - ROOT_URL=http://localhost:80
+  ports:
+    - 80:80
+
+pdfapp-db:
+   image: mongo
+   ports:
+     - 27017
+

@@ -1,7 +1,7 @@
 {
-  "name": "application-name",
+  "name": "PDFApp",
   "version": "1.0.0",
-  "description": "Application description.",
+  "description": "PDFApp makes it easy to fill forms in pdfs.",
   "scripts": {
     "start": "meteor --settings settings-development.json",
     "staging": "meteor deploy staging.meteor.com --settings settings-development.json",

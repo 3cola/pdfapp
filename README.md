@@ -1,6 +1,7 @@
-# The Meteor Chef - Base
-A starting point for Meteor apps.
+# PDFApp
+A simple application to manage and fill PDF Forms in bulk.
 
+On top of the Meteor Chef - Base
 <table>
   <tbody>
     <tr>
@@ -15,3 +16,8 @@ A starting point for Meteor apps.
 </table>
 
 [Read the Documentation](http://themeteorchef.com/base)
+
+dependencies
+- cfs:filesystem & cfs:standard-packages (file manipulation)
+- pdftk:pdftk (pdf manipulation)
+- udondan:jszip (zip manipulation)
