@@ -16,12 +16,12 @@ publicRoutes.route( '/invite/:token', {
   }
 });
 
-publicRoutes.route( '/signup', {
+/*publicRoutes.route( '/signup', {
   name: 'signup',
   action() {
     BlazeLayout.render( 'default', { yield: 'signup' } );
   }
-});
+});*/
 
 publicRoutes.route( '/login', {
   name: 'login',

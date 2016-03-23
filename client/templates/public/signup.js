@@ -1,4 +1,4 @@
-Template.signup.onRendered( () => {
+/*Template.signup.onRendered( () => {
   Modules.client.signup({
     form: "#signup",
     template: Template.instance()
@@ -7,4 +7,4 @@ Template.signup.onRendered( () => {
 
 Template.signup.events({
   'submit form': ( event ) => event.preventDefault()
-});
+});*/

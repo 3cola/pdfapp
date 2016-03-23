@@ -1,4 +1,4 @@
-let signup = ( options ) => {
+/*let signup = ( options ) => {
   _validate( options.form, options.template );
 };
 
@@ -47,4 +47,4 @@ let _handleSignup = ( template ) => {
   });
 };
 
-Modules.client.signup = signup;
+Modules.client.signup = signup;*/

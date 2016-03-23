@@ -16,7 +16,7 @@ Template.default.helpers({
 	redirectAuthenticated() {
 	 	return handleRedirect([
 			'login',
-			'signup',
+			/*'signup',*/
 			'recover-password',
 			'reset-password'
 		], '/' );
