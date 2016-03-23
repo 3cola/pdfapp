@@ -39,3 +39,7 @@ alanning:roles
 random
 momentjs:moment
 kevohagan:sweetalert
+cfs:filesystem
+cfs:standard-packages
+pdftk:pdftk
+udondan:jszip

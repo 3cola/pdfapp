@@ -1,8 +1,8 @@
-Template.users.onCreated( () => {
+Template["users-administration"].onCreated( () => {
   Template.instance().subscribe( 'users' );
 });
 
-Template.users.helpers({
+Template["users-administration"].helpers({
   users: function() {
     var users = Meteor.users.find({}, {sort: {"roles.0": 1, "emails.0.address": 1}});
 
@@ -23,7 +23,7 @@ Template.users.helpers({
   }
 });
 
-Template.users.events({
+Template["users-administration"].events({
   'click [name="deleteUser"]': function( event, template ) {
     Meteor.call( "removeUser",
       this._id

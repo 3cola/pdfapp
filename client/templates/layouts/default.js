@@ -24,10 +24,10 @@ Template.default.helpers({
 	redirectPublic() {
 		return handleRedirect([
 			'index',
-			'dashboard',
-			'users',
-			'managers',
-			'employees'
+			'users-administration',
+			'pdfs-management',
+			'form-fields-management',
+			'fill-and-generate'
 		], '/login' );
 	}
 });

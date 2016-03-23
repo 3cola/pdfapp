@@ -21,26 +21,34 @@ const authenticatedRoutes = FlowRouter.group({
   triggersEnter: [ authenticatedRedirect ]
 });
 
-authenticatedRoutes.route( '/users', {
-  name: 'users',
+authenticatedRoutes.route( '/users-administration', {
+  name: 'users-administration',
   triggersEnter: [ blockUnauthorizedAdmin ],
   action() {
-    BlazeLayout.render( 'default', { yield: 'users' } );
+    BlazeLayout.render( 'default', { yield: 'users-administration' } );
   }
 });
 
-authenticatedRoutes.route( '/managers', {
-  name: 'managers',
+authenticatedRoutes.route( '/pdfs-management', {
+  name: 'pdfs-management',
   triggersEnter: [ blockUnauthorizedManager ],
   action() {
-    BlazeLayout.render( 'default', { yield: 'managers' } );
+    BlazeLayout.render( 'default', { yield: 'pdfs-management' } );
   }
 });
 
-authenticatedRoutes.route( '/employees', {
-  name: 'employees',
+authenticatedRoutes.route( '/form-fields-management', {
+  name: 'form-fields-management',
+  triggersEnter: [ blockUnauthorizedManager ],
   action() {
-    BlazeLayout.render( 'default', { yield: 'employees' } );
+    BlazeLayout.render( 'default', { yield: 'form-fields-management' } );
+  }
+});
+
+authenticatedRoutes.route( '/fill-and-generate', {
+  name: 'fill-and-generate',
+  action() {
+    BlazeLayout.render( 'default', { yield: 'fill-and-generate' } );
   }
 });
 

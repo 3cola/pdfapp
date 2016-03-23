@@ -6,15 +6,15 @@ let _sendUserToDefault = ( redirect ) => {
   let roles = _getCurrentUserRoles();
 
   if ( roles[0] === 'admin' )    {
-    _redirectUser( 'users', redirect );
+    _redirectUser( 'users-administration', redirect );
   }
 
   if ( roles[0] === 'manager' )  {
-    _redirectUser( 'managers', redirect );
+    _redirectUser( 'index', redirect );
   }
 
   if ( roles[0] === 'employee' ) {
-    _redirectUser( 'employees', redirect );
+    _redirectUser( 'index', redirect );
   }
 };
 
